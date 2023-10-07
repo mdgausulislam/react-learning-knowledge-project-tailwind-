@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <nav className="flex items-center justify-between mx-24 mt-4">
+        <nav className="flex items-center justify-between px-24 mt-4">
             <h1 className="font-bold text-xl">The Learning Knowledge</h1>
 
             <div className="flex items-center justify-between">
