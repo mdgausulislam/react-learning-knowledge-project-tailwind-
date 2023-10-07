@@ -1,9 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { FaBookmark } from 'react-icons/fa';
 
-
-const Blog = (props) => {
-    const { id, title, cover, author, author_img, posted_date, reading_time, hashtags } = props.blog;
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
+    const { id, title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         <div className='mb-20  space-y-4'>
             <img className='w-full mb-8' src={cover} alt={`Cover picture of the title ${title}`} />
@@ -36,5 +35,11 @@ const Blog = (props) => {
         </div>
     );
 };
+
+Blog.propTypes = {
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmark: PropTypes.func,
+    handleMarkAsRead: PropTypes.func
+}
 
 export default Blog;

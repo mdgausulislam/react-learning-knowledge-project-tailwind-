@@ -14,3 +14,4 @@ Bookmark.propTypes = {
 }
 
 export default Bookmark;
+
